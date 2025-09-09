@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: msys2
+      - id: msys2
         uses: msys2/setup-msys2@v2
         with:
           msystem: ${{matrix.sys}}
