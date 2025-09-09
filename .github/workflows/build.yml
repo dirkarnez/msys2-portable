@@ -1,4 +1,4 @@
-name: cygwin-action-workflow
+name: msys2-portable-action-workflow
 on:
   push:
     # Sequence of patterns matched against refs/tags
