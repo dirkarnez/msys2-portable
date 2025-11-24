@@ -34,7 +34,8 @@ jobs:
             curl
             git     
             mingw-w64-${{matrix.env}}-openssl
-            mingw-w64-${{matrix.env}}-gcc
+            mingw-w64-${{matrix.env}}-toolchain
+            
 
       - continue-on-error: true
         shell: cmd
