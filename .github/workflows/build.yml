@@ -32,9 +32,13 @@ jobs:
           update: true
           install: >-
             curl
-            git     
+            git
+            make
+            base-devel
+            gcc
             mingw-w64-${{matrix.env}}-openssl
             mingw-w64-${{matrix.env}}-toolchain
+            mingw-w64-${{matrix.env}}-yasm
             
 
       - continue-on-error: true
