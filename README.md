@@ -3,6 +3,7 @@ msys2-portable
 ### Notes
 - This portable helps running msys2 unrestricted on restricted machines (school computer)
   - But every installation / configuration should be done in [`.github/workflows/build.yml`](./.github/workflows/build.yml)
+- The version used here corresponds to [msys2/setup-msys2](https://github.com/msys2/setup-msys2/tags)
 
 ### Manually install packages (Download the compressed file and install)
 - https://repo.msys2.org/mingw/mingw64/
