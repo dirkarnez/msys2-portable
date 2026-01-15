@@ -39,7 +39,7 @@ jobs:
             mingw-w64-${{matrix.env}}-openssl
             mingw-w64-${{matrix.env}}-toolchain
             mingw-w64-${{matrix.env}}-yasm
-            
+            mingw-w64-${{matrix.env}}-kconfig
 
       - continue-on-error: true
         shell: cmd
