@@ -33,10 +33,6 @@ jobs:
             git
             make
             base-devel
-            mingw-w64-${{matrix.env}}-gcc
-            mingw-w64-${{matrix.env}}-openssl
-            mingw-w64-${{matrix.env}}-toolchain
-            mingw-w64-${{matrix.env}}-yasm
           pacboy: >-
             gcc:p
             cmake:p
@@ -53,8 +49,6 @@ jobs:
           gcc --version
           g++ --version
           pg_config --version
-
-          g++ -dumpfullversion -dumpversion | grep -E '^16\.'
 
       - continue-on-error: true
         shell: cmd
