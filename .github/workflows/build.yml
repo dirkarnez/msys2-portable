@@ -23,7 +23,7 @@ jobs:
       run:
         shell: msys2 {0}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - id: msys2
         uses: msys2/setup-msys2@v2
@@ -39,11 +39,29 @@ jobs:
             mingw-w64-${{matrix.env}}-openssl
             mingw-w64-${{matrix.env}}-toolchain
             mingw-w64-${{matrix.env}}-yasm
+          pacboy: >-
+            gcc:p
+            cmake:p
+            ninja:p
+            pkgconf:p
+            postgresql:p
+            sqlite3:p
+
+      - name: Toolchain versions
+        shell: msys2 {0}
+        run: |
+          cmake --version
+          ninja --version
+          gcc --version
+          g++ --version
+          pg_config --version
+
+          g++ -dumpfullversion -dumpversion | grep -E '^16\.'
 
       - continue-on-error: true
         shell: cmd
         run: |
-          cd /d "D:/a/msys2-portable/msys2-portable" &&^
+          cd /d "D:\a\msys2-portable\msys2-portable" &&^
           dir
 
       - continue-on-error: true
